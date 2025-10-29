@@ -1,57 +1,48 @@
-# Project management of bolt.diy
+# Upravljanje projektom GenAi
 
-First off: this sounds funny, we know. "Project management" comes from a world of enterprise stuff and this project is
-far from being enterprisy- it's still anarchy all over the place 😉
+Prvo: ovo zvuči smiješno, znamo. "Upravljanje projektom" dolazi iz svijeta enterprise stvari, a ovaj projekt je daleko od toga - još uvijek je anarhija svuda 😉
 
-But we need to organize ourselves somehow, right?
+Ali moramo se nekako organizirati, zar ne?
 
-> tl;dr: We've got a project board with epics and features. We use PRs as change log and as materialized features. Find it [here](https://github.com/orgs/stackblitz-labs/projects/4).
+> tl;dr: Imamo project board s epicima i značajkama. Koristimo PR-ove kao change log i kao materijalizirane značajke. Pronađite ga [ovdje](https://github.com/orgs/stackblitz-labs/projects/4).
 
-Here's how we structure long-term vision, mid-term capabilities of the software and short term improvements.
+Evo kako strukturiramo dugoročnu viziju, srednjoročne sposobnosti softvera i kratkoročna poboljšanja.
 
-## Strategic epics (long-term)
+## Strateški epici (dugoročno)
 
-Strategic epics define areas in which the product evolves. Usually, these epics don’t overlap. They shall allow the core
-team to define what they believe is most important and should be worked on with the highest priority.
+Strateški epici definiraju područja u kojima se proizvod razvija. Obično se ovi epici ne preklapaju. Oni bi trebali omogućiti osnovnom timu da definira što vjeruju da je najvažnije i na čemu bi trebalo raditi s najvećim prioritetom.
 
-You can find the [epics as issues](https://github.com/stackblitz-labs/bolt.diy/labels/epic) which are probably never
-going to be closed.
+Možete pronaći [epice kao issue-e](https://github.com/stackblitz-labs/bolt.diy/labels/epic) koji vjerojatno nikada neće biti zatvoreni.
 
-What's the benefit / purpose of epics?
+Koja je korist / svrha epica?
 
-1. Prioritization
+1. Prioritizacija
 
-E. g. we could say “managing files is currently more important that quality”. Then, we could thing about which features
-would bring “managing files” forward. It may be different features, such as “upload local files”, “import from a repo”
-or also undo/redo/commit.
+Npr. mogli bismo reći "upravljanje datotekama je trenutno važnije od kvalitete". Tada bismo mogli razmišljati o tome koje značajke bi unaprijedile "upravljanje datotekama". To mogu biti različite značajke, kao što su "upload lokalnih datoteka", "import iz repozitorija" ili također undo/redo/commit.
 
-In a more-or-less regular meeting dedicated for that, the core team discusses which epics matter most, sketch features
-and then check who can work on them. After the meeting, they update the roadmap (at least for the next development turn)
-and this way communicate where the focus currently is.
+Na više-manje redovnom sastanku posvećenom tome, osnovni tim raspravlja koji epici najviše znače, skicira značajke i zatim provjerava tko može raditi na njima. Nakon sastanka, ažuriraju roadmap (barem za sljedeći razvojni ciklus) i na taj način komuniciraju gdje je fokus trenutno.
 
-2. Grouping of features
+2. Grupiranje značajki
 
-By linking features with epics, we can keep them together and document _why_ we invest work into a particular thing.
+Povezivanjem značajki s epicima, možemo ih držati zajedno i dokumentirati _zašto_ ulažemo rad u određenu stvar.
 
-## Features (mid-term)
+## Značajke (srednjoročno)
 
-We all know probably a dozen of methodologies following which features are being described (User story, business
-function, you name it).
+Svi vjerojatno znamo desetak metodologija prema kojima se opisuju značajke (User story, business funkcija, nazovite to kako želite).
 
-However, we intentionally describe features in a more vague manner. Why? Everybody loves crisp, well-defined
-acceptance-criteria, no? Well, every product owner loves it. because he knows what he’ll get once it’s done.
+Međutim, namjerno opisujemo značajke na nejasni način. Zašto? Svi vole jasne, dobro definirane kriterije prihvaćanja, zar ne? Pa, svaki product owner to voli, jer zna što će dobiti kada bude gotovo.
 
-But: **here is no owner of this product**. Therefore, we grant _maximum flexibility to the developer contributing a feature_ – so that he can bring in his ideas and have most fun implementing it.
+Ali: **ovdje nema vlasnika ovog proizvoda**. Stoga dajemo _maksimalnu fleksibilnost developeru koji doprinosi značajku_ - kako bi mogao unijeti svoje ideje i imati najviše zabave implementirajući je.
 
-The feature therefore tries to describe _what_ should be improved but not in detail _how_.
+Značajka stoga pokušava opisati _što_ treba poboljšati, ali ne detaljno _kako_.
 
-## PRs as materialized features (short-term)
+## PR-ovi kao materijalizirane značajke (kratkoročno)
 
-Once a developer starts working on a feature, a draft-PR _can_ be opened asap to share, describe and discuss, how the feature shall be implemented. But: this is not a must. It just helps to get early feedback and get other developers involved. Sometimes, the developer just wants to get started and then open a PR later.
+Nakon što developer počne raditi na značajki, draft-PR _može_ biti otvoren što prije kako bi se podijelilo, opisalo i raspravljalo kako bi značajka trebala biti implementirana. Ali: ovo nije obavezno. Samo pomaže dobiti ranu povratnu informaciju i uključiti druge developere. Ponekad developer samo želi započeti i zatim otvoriti PR kasnije.
 
-In a loosely organized project, it may as well happen that multiple PRs are opened for the same feature. This is no real issue: Usually, peoply being passionate about a solution are willing to join forces and get it done together. And if a second developer was just faster getting the same feature realized: Be happy that it's been done, close the PR and look out for the next feature to implement 🤓
+U labavo organiziranom projektu, može se također dogoditi da se otvori više PR-ova za istu značajku. To nije pravi problem: Obično su ljudi koji su strastveni o rješenju spremni udružiti snage i dovršiti ga zajedno. A ako je drugi developer bio brži u realizaciji iste značajke: Budite sretni što je gotovo, zatvorite PR i potražite sljedeću značajku za implementaciju 🤓
 
-## PRs as change log
+## PR-ovi kao change log
 
-Once a PR is merged, a squashed commit contains the whole PR description which allows for a good change log.
-All authors of commits in the PR are mentioned in the squashed commit message and become contributors 🙌
+Nakon što je PR spojen, squashed commit sadrži cijeli PR opis što omogućuje dobar change log.
+Svi autori commita u PR-u su spomenuti u squashed commit poruci i postaju contributori 🙌

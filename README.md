@@ -1,368 +1,287 @@
-# bolt.diy
+# GenAi | Hrvatski poslovni AI!
 
-[![bolt.diy: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.diy)
+[![GenAi: AI-Powered Full-Stack Web Development u pregledniku](./public/social_preview_index.jpg)](https://genai.hr)
 
-Welcome to bolt.diy, the official open source version of Bolt.new, which allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
-
------
-Check the [bolt.diy Docs](https://stackblitz-labs.github.io/bolt.diy/) for more offical installation instructions and more informations.
+Dobrodošli u GenAi, hrvatski poslovni AI asistent koji vam omogućuje AI-powered full-stack web development direktno u vašem pregledniku! GenAi podržava OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek i Groq modele - i lako se proširuje za korištenje bilo kojeg drugog modela podržanog Vercel AI SDK-om!
 
 -----
-Also [this pinned post in our community](https://thinktank.ottomator.ai/t/videos-tutorial-helpful-content/3243) has a bunch of incredible resources for running and deploying bolt.diy yourself!
 
-We have also launched an experimental agent called the "bolt.diy Expert" that can answer common questions about bolt.diy. Find it here on the [oTTomator Live Agent Studio](https://studio.ottomator.ai/).
+**GenAi | Hrvatski poslovni AI** je izgrađen kao najbolji open source AI coding assistant prilagođen hrvatskom tržištu!
 
-bolt.diy was originally started by [Cole Medin](https://www.youtube.com/@ColeMedin) but has quickly grown into a massive community effort to build the BEST open source AI coding assistant!
+## Sadržaj
 
-## Table of Contents
+- [Pridružite se zajednici](#pridružite-se-zajednici)
+- [Značajke](#značajke)
+- [Postavljanje](#postavljanje)
+- [Pokretanje aplikacije](#pokretanje-aplikacije)
+- [Dostupne naredbe](#dostupne-naredbe)
+- [Doprinos](#doprinos)
+- [Najčešća pitanja](#najčešća-pitanja)
 
-- [Join the Community](#join-the-community)
-- [Requested Additions](#requested-additions)
-- [Features](#features)
-- [Setup](#setup)
-- [Run the Application](#run-the-application)
-- [Available Scripts](#available-scripts)
-- [Contributing](#contributing)
-- [Roadmap](#roadmap)
-- [FAQ](#faq)
+## Pridružite se zajednici
 
-## Join the community
+Pridružite se našoj zajednici i surađujte s drugim developerima!
 
-[Join the bolt.diy community here, in the oTTomator Think Tank!](https://thinktank.ottomator.ai)
+## Značajke
 
-## Project management
+- **AI-powered full-stack web development** za **NodeJS aplikacije** direktno u vašem pregledniku
+- **Podrška za više LLM modela** s proširivom arhitekturom za integraciju dodatnih modela
+- **Prilaganje slika u promptove** za bolje kontekstualno razumijevanje
+- **Integrirani terminal** za pregled izvršavanja LLM naredbi
+- **Vraćanje koda na prethodne verzije** za lakše debugiranje i brže izmjene
+- **Preuzimanje projekata kao ZIP** za jednostavan prijenos ili sinkronizacija u lokalnu mapu
+- **Docker podrška** za jednostavno postavljanje
+- **Deploy** direktno na **Netlify**
 
-Bolt.diy is a community effort! Still, the core team of contributors aims at organizing the project in way that allows
-you to understand where the current areas of focus are.
+## Postavljanje
 
-If you want to know what we are working on, what we are planning to work on, or if you want to contribute to the
-project, please check the [project management guide](./PROJECT.md) to get started easily.
+Ako ste novi u instalaciji softvera s GitHuba, ne brinite! Ako naiđete na bilo kakve probleme, slobodno pošaljite "issue" ili poboljšajte ovu dokumentaciju.
 
-## Requested Additions
+## Brzo preuzimanje
 
-- ✅ OpenRouter Integration (@coleam00)
-- ✅ Gemini Integration (@jonathands)
-- ✅ Autogenerate Ollama models from what is downloaded (@yunatamos)
-- ✅ Filter models by provider (@jasonm23)
-- ✅ Download project as ZIP (@fabwaseem)
-- ✅ Improvements to the main bolt.new prompt in `app\lib\.server\llm\prompts.ts` (@kofi-bhr)
-- ✅ DeepSeek API Integration (@zenith110)
-- ✅ Mistral API Integration (@ArulGandhi)
-- ✅ "Open AI Like" API Integration (@ZerxZ)
-- ✅ Ability to sync files (one way sync) to local folder (@muzafferkadir)
-- ✅ Containerize the application with Docker for easy installation (@aaronbolton)
-- ✅ Publish projects directly to GitHub (@goncaloalves)
-- ✅ Ability to enter API keys in the UI (@ali00209)
-- ✅ xAI Grok Beta Integration (@milutinke)
-- ✅ LM Studio Integration (@karrot0)
-- ✅ HuggingFace Integration (@ahsan3219)
-- ✅ Bolt terminal to see the output of LLM run commands (@thecodacus)
-- ✅ Streaming of code output (@thecodacus)
-- ✅ Ability to revert code to earlier version (@wonderwhy-er)
-- ✅ Chat history backup and restore functionality (@sidbetatester)
-- ✅ Cohere Integration (@hasanraiyan)
-- ✅ Dynamic model max token length (@hasanraiyan)
-- ✅ Better prompt enhancing (@SujalXplores)
-- ✅ Prompt caching (@SujalXplores)
-- ✅ Load local projects into the app (@wonderwhy-er)
-- ✅ Together Integration (@mouimet-infinisoft)
-- ✅ Mobile friendly (@qwikode)
-- ✅ Better prompt enhancing (@SujalXplores)
-- ✅ Attach images to prompts (@atrokhym)(@stijnus)
-- ✅ Added Git Clone button (@thecodacus)
-- ✅ Git Import from url (@thecodacus)
-- ✅ PromptLibrary to have different variations of prompts for different use cases (@thecodacus)
-- ✅ Detect package.json and commands to auto install & run preview for folder and git import (@wonderwhy-er)
-- ✅ Selection tool to target changes visually (@emcconnell)
-- ✅ Detect terminal Errors and ask bolt to fix it (@thecodacus)
-- ✅ Detect preview Errors and ask bolt to fix it (@wonderwhy-er)
-- ✅ Add Starter Template Options (@thecodacus)
-- ✅ Perplexity Integration (@meetpateltech)
-- ✅ AWS Bedrock Integration (@kunjabijukchhe)
-- ✅ Add a "Diff View" to see the changes (@toddyclipsgg)
-- ⬜ **HIGH PRIORITY** - Prevent bolt from rewriting files as often (file locking and diffs)
-- ⬜ **HIGH PRIORITY** - Better prompting for smaller LLMs (code window sometimes doesn't start)
-- ⬜ **HIGH PRIORITY** - Run agents in the backend as opposed to a single model call
-- ✅ Deploy directly to Netlify (@xKevIsDev)
-- ✅ Supabase Integration (@xKevIsDev)
-- ⬜ Have LLM plan the project in a MD file for better results/transparency
-- ⬜ VSCode Integration with git-like confirmations
-- ⬜ Upload documents for knowledge - UI design templates, a code base to reference coding style, etc.
-- ✅ Voice prompting
-- ⬜ Azure Open AI API Integration
-- ⬜ Vertex AI Integration
-- ⬜ Granite Integration
-- ✅ Popout Window for Web Container(@stijnus)
-- ✅ Ability to change Popout window size (@stijnus)
+[![Preuzmi najnovije izdanje](https://img.shields.io/github/v/release/stackblitz-labs/bolt.diy?label=Preuzmi%20GenAi&sort=semver)](https://github.com/stackblitz-labs/bolt.diy/releases/latest) ← Kliknite ovdje za najnoviju verziju!
 
-## Features
+- Zatim **kliknite source.zip**
 
-- **AI-powered full-stack web development** for **NodeJS based applications** directly in your browser.
-- **Support for multiple LLMs** with an extensible architecture to integrate additional models.
-- **Attach images to prompts** for better contextual understanding.
-- **Integrated terminal** to view output of LLM-run commands.
-- **Revert code to earlier versions** for easier debugging and quicker changes.
-- **Download projects as ZIP** for easy portability Sync to a folder on the host.
-- **Integration-ready Docker support** for a hassle-free setup.
-- **Deploy** directly to **Netlify**
+## Preduvjeti
 
-## Setup
+Prije nego započnete, trebat ćete instalirati dva važna softvera:
 
-If you're new to installing software from GitHub, don't worry! If you encounter any issues, feel free to submit an "issue" using the provided links or improve this documentation by forking the repository, editing the instructions, and submitting a pull request. The following instruction will help you get the stable branch up and running on your local machine in no time.
+### Instalacija Node.js
 
-Let's get you up and running with the stable version of Bolt.DIY!
+Node.js je potreban za pokretanje aplikacije.
 
-## Quick Download
-
-[![Download Latest Release](https://img.shields.io/github/v/release/stackblitz-labs/bolt.diy?label=Download%20Bolt&sort=semver)](https://github.com/stackblitz-labs/bolt.diy/releases/latest) ← Click here to go the the latest release version!
-
-- Next **click source.zip**
-
-## Prerequisites
-
-Before you begin, you'll need to install two important pieces of software:
-
-### Install Node.js
-
-Node.js is required to run the application.
-
-1. Visit the [Node.js Download Page](https://nodejs.org/en/download/)
-2. Download the "LTS" (Long Term Support) version for your operating system
-3. Run the installer, accepting the default settings
-4. Verify Node.js is properly installed:
-   - **For Windows Users**:
-     1. Press `Windows + R`
-     2. Type "sysdm.cpl" and press Enter
-     3. Go to "Advanced" tab → "Environment Variables"
-     4. Check if `Node.js` appears in the "Path" variable
-   - **For Mac/Linux Users**:
-     1. Open Terminal
-     2. Type this command:
+1. Posjetite [Node.js stranicu za preuzimanje](https://nodejs.org/en/download/)
+2. Preuzmite "LTS" (Long Term Support) verziju za vaš operativni sustav
+3. Pokrenite instalaciju, prihvaćajući zadane postavke
+4. Provjerite je li Node.js pravilno instaliran:
+   - **Za Windows korisnike**:
+     1. Pritisnite `Windows + R`
+     2. Upišite "sysdm.cpl" i pritisnite Enter
+     3. Idite na "Advanced" tab → "Environment Variables"
+     4. Provjerite pojavljuje li se `Node.js` u "Path" varijabli
+   - **Za Mac/Linux korisnike**:
+     1. Otvorite Terminal
+     2. Upišite ovu naredbu:
         ```bash
         echo $PATH
         ```
-     3. Look for `/usr/local/bin` in the output
+     3. Potražite `/usr/local/bin` u rezultatu
 
-## Running the Application
+## Pokretanje aplikacije
 
-You have two options for running Bolt.DIY: directly on your machine or using Docker.
+Imate dvije opcije za pokretanje GenAi: direktno na vašem računalu ili korištenjem Dockera.
 
-### Option 1: Direct Installation (Recommended for Beginners)
+### Opcija 1: Direktna instalacija (Preporučeno za početnike)
 
-1. **Install Package Manager (pnpm)**:
+1. **Instalirajte Package Manager (pnpm)**:
 
    ```bash
    npm install -g pnpm
    ```
 
-2. **Install Project Dependencies**:
+2. **Instalirajte projektne ovisnosti**:
 
    ```bash
    pnpm install
    ```
 
-3. **Start the Application**:
+3. **Pokrenite aplikaciju**:
 
    ```bash
    pnpm run dev
    ```
-   
-### Option 2: Using Docker
 
-This option requires some familiarity with Docker but provides a more isolated environment.
+### Opcija 2: Korištenje Dockera
 
-#### Additional Prerequisite
+Ova opcija zahtijeva određeno poznavanje Dockera, ali pruža izoliranije okruženje.
 
-- Install Docker: [Download Docker](https://www.docker.com/)
+#### Dodatni preduvjet
 
-#### Steps:
+- Instalirajte Docker: [Preuzmi Docker](https://www.docker.com/)
 
-1. **Build the Docker Image**:
+#### Koraci:
+
+1. **Izgradite Docker Image**:
 
    ```bash
-   # Using npm script:
+   # Korištenje npm skripta:
    npm run dockerbuild
 
-   # OR using direct Docker command:
+   # ILI korištenje direktne Docker naredbe:
    docker build . --target bolt-ai-development
    ```
 
-2. **Run the Container**:
+2. **Pokrenite Container**:
    ```bash
    docker compose --profile development up
    ```
 
-## Configuring API Keys and Providers
+## Konfiguracija API ključeva i pružatelja usluga
 
-### Adding Your API Keys
+### Dodavanje vaših API ključeva
 
-Setting up your API keys in Bolt.DIY is straightforward:
+Postavljanje API ključeva u GenAi je jednostavno:
 
-1. Open the home page (main interface)
-2. Select your desired provider from the dropdown menu
-3. Click the pencil (edit) icon
-4. Enter your API key in the secure input field
+1. Otvorite početnu stranicu (glavni sučelje)
+2. Odaberite željenog pružatelja usluga iz padajućeg izbornika
+3. Kliknite ikonu olovke (edit)
+4. Unesite svoj API ključ u sigurno polje za unos
 
-![API Key Configuration Interface](./docs/images/api-key-ui-section.png)
+![Sučelje za konfiguraciju API ključa](./docs/images/api-key-ui-section.png)
 
-### Configuring Custom Base URLs
+### Konfiguracija prilagođenih osnovnih URL-ova
 
-For providers that support custom base URLs (such as Ollama or LM Studio), follow these steps:
+Za pružatelje usluga koji podržavaju prilagođene osnovne URL-ove (kao što su Ollama ili LM Studio), slijedite ove korake:
 
-1. Click the settings icon in the sidebar to open the settings menu
-   ![Settings Button Location](./docs/images/bolt-settings-button.png)
+1. Kliknite ikonu postavki u bočnoj traci za otvaranje izbornika postavki
+   ![Lokacija gumba za postavke](./docs/images/bolt-settings-button.png)
 
-2. Navigate to the "Providers" tab
-3. Search for your provider using the search bar
-4. Enter your custom base URL in the designated field
-   ![Provider Base URL Configuration](./docs/images/provider-base-url.png)
+2. Idite na karticu "Providers"
+3. Potražite svog pružatelja usluga koristeći traku za pretraživanje
+4. Unesite svoj prilagođeni osnovni URL u predviđeno polje
+   ![Konfiguracija osnovnog URL-a pružatelja usluga](./docs/images/provider-base-url.png)
 
-> **Note**: Custom base URLs are particularly useful when running local instances of AI models or using custom API endpoints.
+> **Napomena**: Prilagođeni osnovni URL-ovi su posebno korisni kada pokrećete lokalne instance AI modela ili koristite prilagođene API krajnje točke.
 
-### Supported Providers
+### Podržani pružatelji usluga
 
 - Ollama
 - LM Studio
 - OpenAILike
 
-## Setup Using Git (For Developers only)
+## Postavljanje korištenjem Git-a (Samo za developere)
 
-This method is recommended for developers who want to:
+Ova metoda je preporučena za developere koji žele:
 
-- Contribute to the project
-- Stay updated with the latest changes
-- Switch between different versions
-- Create custom modifications
+- Doprinijeti projektu
+- Ostati ažurirani s najnovijim promjenama
+- Prebacivati se između različitih verzija
+- Stvoriti prilagođene modifikacije
 
-#### Prerequisites
+#### Preduvjeti
 
-1. Install Git: [Download Git](https://git-scm.com/downloads)
+1. Instalirajte Git: [Preuzmi Git](https://git-scm.com/downloads)
 
-#### Initial Setup
+#### Početno postavljanje
 
-1. **Clone the Repository**:
+1. **Klonirajte repozitorij**:
 
    ```bash
    git clone -b stable https://github.com/stackblitz-labs/bolt.diy.git
    ```
 
-2. **Navigate to Project Directory**:
+2. **Navigirajte do direktorija projekta**:
 
    ```bash
    cd bolt.diy
    ```
 
-3. **Install Dependencies**:
+3. **Instalirajte ovisnosti**:
 
    ```bash
    pnpm install
    ```
 
-4. **Start the Development Server**:
+4. **Pokrenite razvojni poslužitelj**:
    ```bash
    pnpm run dev
    ```
 
-5. **(OPTIONAL)** Switch to the Main Branch if you want to use pre-release/testbranch:
+5. **(OPCIONALNO)** Prebacite se na Main branch ako želite koristiti pre-release/testbranch:
    ```bash
    git checkout main
    pnpm install
    pnpm run dev
    ```
-  Hint: Be aware that this can have beta-features and more likely got bugs than the stable release
+   Napomena: Budite svjesni da ovo može imati beta funkcionalnosti i veću vjerojatnost grešaka nego stabilno izdanje
 
->**Open the WebUI to test (Default: http://localhost:5173)**
->   - Beginngers: 
->     - Try to use a sophisticated Provider/Model like Anthropic with Claude Sonnet 3.x Models to get best results
->     - Explanation: The System Prompt currently implemented in bolt.diy cant cover the best performance for all providers and models out there. So it works better with some models, then other, even if the models itself are perfect for >programming
->     - Future: Planned is a Plugin/Extentions-Library so there can be different System Prompts for different Models, which will help to get better results
+>**Otvorite WebUI za testiranje (Zadano: http://localhost:5173)**
+>   - Početnici:
+>     - Pokušajte koristiti sofisticirani Provider/Model kao što je Anthropic s Claude Sonnet 3.x modelima za najbolje rezultate
+>     - Objašnjenje: Sistemski prompt trenutno implementiran u GenAi ne može pokriti najbolje performanse za sve pružatelje usluga i modele. Stoga bolje funkcionira s nekim modelima nego s drugima, čak i ako su sami modeli savršeni za programiranje
+>     - Budućnost: Planirana je Plugin/Extensions biblioteka kako bi postojali različiti sistemski promptovi za različite modele, što će pomoći u postizanju boljih rezultata
 
-#### Staying Updated
+#### Ostanite ažurirani
 
-To get the latest changes from the repository:
+Za dobivanje najnovijih promjena iz repozitorija:
 
-1. **Save Your Local Changes** (if any):
+1. **Spremite svoje lokalne promjene** (ako ih ima):
 
    ```bash
    git stash
    ```
 
-2. **Pull Latest Updates**:
+2. **Preuzmite najnovija ažuriranja**:
 
    ```bash
-   git pull 
+   git pull
    ```
 
-3. **Update Dependencies**:
+3. **Ažurirajte ovisnosti**:
 
    ```bash
    pnpm install
    ```
 
-4. **Restore Your Local Changes** (if any):
+4. **Vratite svoje lokalne promjene** (ako ih ima):
    ```bash
    git stash pop
    ```
 
-#### Troubleshooting Git Setup
+#### Rješavanje problema s Git postavljanjem
 
-If you encounter issues:
+Ako naiđete na probleme:
 
-1. **Clean Installation**:
+1. **Čista instalacija**:
 
    ```bash
-   # Remove node modules and lock files
+   # Uklonite node module i lock datoteke
    rm -rf node_modules pnpm-lock.yaml
 
-   # Clear pnpm cache
+   # Očistite pnpm cache
    pnpm store prune
 
-   # Reinstall dependencies
+   # Ponovno instalirajte ovisnosti
    pnpm install
    ```
 
-2. **Reset Local Changes**:
+2. **Resetirajte lokalne promjene**:
    ```bash
-   # Discard all local changes
+   # Odbacite sve lokalne promjene
    git reset --hard origin/main
    ```
 
-Remember to always commit your local changes or stash them before pulling updates to avoid conflicts.
+Ne zaboravite uvijek commitati svoje lokalne promjene ili ih stashati prije preuzimanja ažuriranja kako biste izbjegli konflikte.
 
 ---
 
-## Available Scripts
+## Dostupne naredbe
 
-- **`pnpm run dev`**: Starts the development server.
-- **`pnpm run build`**: Builds the project.
-- **`pnpm run start`**: Runs the built application locally using Wrangler Pages.
-- **`pnpm run preview`**: Builds and runs the production build locally.
-- **`pnpm test`**: Runs the test suite using Vitest.
-- **`pnpm run typecheck`**: Runs TypeScript type checking.
-- **`pnpm run typegen`**: Generates TypeScript types using Wrangler.
-- **`pnpm run deploy`**: Deploys the project to Cloudflare Pages.
-- **`pnpm run lint:fix`**: Automatically fixes linting issues.
-
----
-
-## Contributing
-
-We welcome contributions! Check out our [Contributing Guide](CONTRIBUTING.md) to get started.
+- **`pnpm run dev`**: Pokreće razvojni poslužitelj.
+- **`pnpm run build`**: Gradi projekt.
+- **`pnpm run start`**: Pokreće izgrađenu aplikaciju lokalno koristeći Wrangler Pages.
+- **`pnpm run preview`**: Gradi i pokreće produkcijsku verziju lokalno.
+- **`pnpm test`**: Pokreće test suite koristeći Vitest.
+- **`pnpm run typecheck`**: Pokreće TypeScript provjeru tipova.
+- **`pnpm run typegen`**: Generira TypeScript tipove koristeći Wrangler.
+- **`pnpm run deploy`**: Deploya projekt na Cloudflare Pages.
+- **`pnpm run lint:fix`**: Automatski ispravlja linting probleme.
 
 ---
 
-## Roadmap
+## Doprinos
 
-Explore upcoming features and priorities on our [Roadmap](https://roadmap.sh/r/ottodev-roadmap-2ovzo).
+Pozdravljamo doprinose! Pogledajte naš [Vodič za doprinos](CONTRIBUTING.md) za početak.
 
 ---
 
-## FAQ
+## Najčešća pitanja
 
-For answers to common questions, issues, and to see a list of recommended models, visit our [FAQ Page](FAQ.md).
+Za odgovore na uobičajena pitanja, probleme i popis preporučenih modela, posjetite našu [FAQ stranicu](FAQ.md).
 
+# Licenciranje
 
-# Licensing
-**Who needs a commercial WebContainer API license?**
+**Tko treba komercijalnu WebContainer API licencu?**
 
-bolt.diy source code is distributed as MIT, but it uses WebContainers API that [requires licensing](https://webcontainers.io/enterprise) for production usage in a commercial, for-profit setting. (Prototypes or POCs do not require a commercial license.) If you're using the API to meet the needs of your customers, prospective customers, and/or employees, you need a license to ensure compliance with our Terms of Service. Usage of the API in violation of these terms may result in your access being revoked.
+GenAi source kod je distribuiran kao MIT, ali koristi WebContainers API koji [zahtijeva licenciranje](https://webcontainers.io/enterprise) za produkcijsku upotrebu u komercijalnom okruženju s ciljem profita. (Prototipovi ili POC-ovi ne zahtijevaju komercijalnu licencu.) Ako koristite API za zadovoljavanje potreba vaših klijenata, potencijalnih klijenata i/ili zaposlenika, potrebna vam je licenca kako biste osigurali sukladnost s našim Uvjetima pružanja usluge. Korištenje API-ja kršenjem ovih uvjeta može rezultirati opozvanjem vašeg pristupa.

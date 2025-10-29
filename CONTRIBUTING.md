@@ -1,119 +1,119 @@
-# Contribution Guidelines
+# Smjernice za doprinos
 
-Welcome! This guide provides all the details you need to contribute effectively to the project. Thank you for helping us make **bolt.diy** a better tool for developers worldwide. 💡
+Dobrodošli! Ovaj vodič pruža sve detalje koji su vam potrebni za učinkovit doprinos projektu. Hvala vam što nam pomažete učiniti **GenAi** boljim alatom za developere širom svijeta. 💡
 
 ---
 
-## 📋 Table of Contents
+## 📋 Sadržaj
 
-1. [Code of Conduct](#code-of-conduct)
-2. [How Can I Contribute?](#how-can-i-contribute)
-3. [Pull Request Guidelines](#pull-request-guidelines)
-4. [Coding Standards](#coding-standards)
-5. [Development Setup](#development-setup)
-6. [Testing](#testing)
+1. [Kodeks ponašanja](#kodeks-ponašanja)
+2. [Kako mogu doprinijeti?](#kako-mogu-doprinijeti)
+3. [Smjernice za Pull Request](#smjernice-za-pull-request)
+4. [Standardi kodiranja](#standardi-kodiranja)
+5. [Razvojno postavljanje](#razvojno-postavljanje)
+6. [Testiranje](#testiranje)
 7. [Deployment](#deployment)
 8. [Docker Deployment](#docker-deployment)
-9. [VS Code Dev Containers Integration](#vs-code-dev-containers-integration)
+9. [VS Code Dev Containers integracija](#vs-code-dev-containers-integracija)
 
 ---
 
-## 🛡️ Code of Conduct
+## 🛡️ Kodeks ponašanja
 
-This project is governed by our **Code of Conduct**. By participating, you agree to uphold this code. Report unacceptable behavior to the project maintainers.
-
----
-
-## 🛠️ How Can I Contribute?
-
-### 1️⃣ Reporting Bugs or Feature Requests
-
-- Check the [issue tracker](#) to avoid duplicates.
-- Use issue templates (if available).
-- Provide detailed, relevant information and steps to reproduce bugs.
-
-### 2️⃣ Code Contributions
-
-1. Fork the repository.
-2. Create a feature or fix branch.
-3. Write and test your code.
-4. Submit a pull request (PR).
-
-### 3️⃣ Join as a Core Contributor
-
-Interested in maintaining and growing the project? Fill out our [Contributor Application Form](https://forms.gle/TBSteXSDCtBDwr5m7).
+Ovaj projekt se vodi našim **Kodeksom ponašanja**. Sudjelovanjem se slažete pridržavati ovog kodeksa. Prijavite neprihvatljivo ponašanje održavateljima projekta.
 
 ---
 
-## ✅ Pull Request Guidelines
+## 🛠️ Kako mogu doprinijeti?
+
+### 1️⃣ Prijavljivanje bugova ili zahtjeva za značajke
+
+- Provjerite issue tracker kako biste izbjegli duplikate.
+- Koristite predloške za issue-e (ako su dostupni).
+- Pružite detaljne, relevantne informacije i korake za reprodukciju bugova.
+
+### 2️⃣ Doprinosi kodu
+
+1. Forkajte repozitorij.
+2. Stvorite feature ili fix branch.
+3. Napišite i testirajte svoj kod.
+4. Pošaljite pull request (PR).
+
+### 3️⃣ Pridružite se kao glavni contributor
+
+Zainteresirani za održavanje i razvoj projekta? Ispunite naš [Obrazac za prijavu contributora](https://forms.gle/TBSteXSDCtBDwr5m7).
+
+---
+
+## ✅ Smjernice za Pull Request
 
 ### PR Checklist
 
-- Branch from the **main** branch.
-- Update documentation, if needed.
-- Test all functionality manually.
-- Focus on one feature/bug per PR.
+- Granajte se od **main** brancha.
+- Ažurirajte dokumentaciju, ako je potrebno.
+- Testirajte sve funkcionalnosti ručno.
+- Fokusirajte se na jednu značajku/bug po PR-u.
 
-### Review Process
+### Proces pregleda
 
-1. Manual testing by reviewers.
-2. At least one maintainer review required.
-3. Address review comments.
-4. Maintain a clean commit history.
-
----
-
-## 📏 Coding Standards
-
-### General Guidelines
-
-- Follow existing code style.
-- Comment complex logic.
-- Keep functions small and focused.
-- Use meaningful variable names.
+1. Ručno testiranje od strane pregledavača.
+2. Potreban je pregled najmanje jednog održavatelja.
+3. Odgovorite na komentare iz pregleda.
+4. Održavajte čistu commit povijest.
 
 ---
 
-## 🖥️ Development Setup
+## 📏 Standardi kodiranja
 
-### 1️⃣ Initial Setup
+### Opće smjernice
 
-- Clone the repository:
+- Slijedite postojeći stil koda.
+- Komentirajte kompleksnu logiku.
+- Držite funkcije malim i fokusiranim.
+- Koristite smislena imena varijabli.
+
+---
+
+## 🖥️ Razvojno postavljanje
+
+### 1️⃣ Početno postavljanje
+
+- Klonirajte repozitorij:
   ```bash
   git clone https://github.com/stackblitz-labs/bolt.diy.git
   ```
-- Install dependencies:
+- Instalirajte ovisnosti:
   ```bash
   pnpm install
   ```
-- Set up environment variables:
-  1. Rename `.env.example` to `.env.local`.
-  2. Add your API keys:
+- Postavite environment varijable:
+  1. Preimenujte `.env.example` u `.env.local`.
+  2. Dodajte svoje API ključeve:
      ```bash
      GROQ_API_KEY=XXX
      HuggingFace_API_KEY=XXX
      OPENAI_API_KEY=XXX
      ...
      ```
-  3. Optionally set:
-     - Debug level: `VITE_LOG_LEVEL=debug`
-     - Context size: `DEFAULT_NUM_CTX=32768`
+  3. Opcionalno postavite:
+     - Debug razinu: `VITE_LOG_LEVEL=debug`
+     - Veličinu konteksta: `DEFAULT_NUM_CTX=32768`
 
-**Note**: Never commit your `.env.local` file to version control. It’s already in `.gitignore`.
+**Napomena**: Nikada ne commitajte svoju `.env.local` datoteku u kontrolu verzija. Već je u `.gitignore`.
 
-### 2️⃣ Run Development Server
+### 2️⃣ Pokretanje razvojnog poslužitelja
 
 ```bash
 pnpm run dev
 ```
 
-**Tip**: Use **Google Chrome Canary** for local testing.
+**Savjet**: Koristite **Google Chrome Canary** za lokalno testiranje.
 
 ---
 
-## 🧪 Testing
+## 🧪 Testiranje
 
-Run the test suite with:
+Pokrenite test suite sa:
 
 ```bash
 pnpm test
@@ -123,46 +123,46 @@ pnpm test
 
 ## 🚀 Deployment
 
-### Deploy to Cloudflare Pages
+### Deploy na Cloudflare Pages
 
 ```bash
 pnpm run deploy
 ```
 
-Ensure you have required permissions and that Wrangler is configured.
+Osigurajte da imate potrebne dozvole i da je Wrangler konfiguriran.
 
 ---
 
 ## 🐳 Docker Deployment
 
-This section outlines the methods for deploying the application using Docker. The processes for **Development** and **Production** are provided separately for clarity.
+Ovaj odjeljak opisuje metode za deployment aplikacije korištenjem Dockera. Procesi za **Development** i **Production** su odvojeno navedeni radi jasnoće.
 
 ---
 
-### 🧑‍💻 Development Environment
+### 🧑‍💻 Razvojno okruženje
 
-#### Build Options
+#### Opcije za izgradnju
 
-**Option 1: Helper Scripts**
+**Opcija 1: Helper skripta**
 
 ```bash
 # Development build
 npm run dockerbuild
 ```
 
-**Option 2: Direct Docker Build Command**
+**Opcija 2: Direktna Docker build naredba**
 
 ```bash
 docker build . --target bolt-ai-development
 ```
 
-**Option 3: Docker Compose Profile**
+**Opcija 3: Docker Compose profil**
 
 ```bash
 docker compose --profile development up
 ```
 
-#### Running the Development Container
+#### Pokretanje razvojnog kontejnera
 
 ```bash
 docker run -p 5173:5173 --env-file .env.local bolt-ai:development
@@ -170,30 +170,30 @@ docker run -p 5173:5173 --env-file .env.local bolt-ai:development
 
 ---
 
-### 🏭 Production Environment
+### 🏭 Produkcijsko okruženje
 
-#### Build Options
+#### Opcije za izgradnju
 
-**Option 1: Helper Scripts**
+**Opcija 1: Helper skripta**
 
 ```bash
 # Production build
 npm run dockerbuild:prod
 ```
 
-**Option 2: Direct Docker Build Command**
+**Opcija 2: Direktna Docker build naredba**
 
 ```bash
 docker build . --target bolt-ai-production
 ```
 
-**Option 3: Docker Compose Profile**
+**Opcija 3: Docker Compose profil**
 
 ```bash
 docker compose --profile production up
 ```
 
-#### Running the Production Container
+#### Pokretanje produkcijskog kontejnera
 
 ```bash
 docker run -p 5173:5173 --env-file .env.local bolt-ai:production
@@ -203,40 +203,40 @@ docker run -p 5173:5173 --env-file .env.local bolt-ai:production
 
 ### Coolify Deployment
 
-For an easy deployment process, use [Coolify](https://github.com/coollabsio/coolify):
+Za jednostavan proces deploymenta, koristite [Coolify](https://github.com/coollabsio/coolify):
 
-1. Import your Git repository into Coolify.
-2. Choose **Docker Compose** as the build pack.
-3. Configure environment variables (e.g., API keys).
-4. Set the start command:
+1. Uvezite svoj Git repozitorij u Coolify.
+2. Odaberite **Docker Compose** kao build pack.
+3. Konfigurirajte environment varijable (npr. API ključeve).
+4. Postavite start naredbu:
    ```bash
    docker compose --profile production up
    ```
 
 ---
 
-## 🛠️ VS Code Dev Containers Integration
+## 🛠️ VS Code Dev Containers integracija
 
-The `docker-compose.yaml` configuration is compatible with **VS Code Dev Containers**, making it easy to set up a development environment directly in Visual Studio Code.
+`docker-compose.yaml` konfiguracija je kompatibilna s **VS Code Dev Containers**, što olakšava postavljanje razvojnog okruženja direktno u Visual Studio Code.
 
-### Steps to Use Dev Containers
+### Koraci za korištenje Dev Containers
 
-1. Open the command palette in VS Code (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
-2. Select **Dev Containers: Reopen in Container**.
-3. Choose the **development** profile when prompted.
-4. VS Code will rebuild the container and open it with the pre-configured environment.
+1. Otvorite command paletu u VS Code-u (`Ctrl+Shift+P` ili `Cmd+Shift+P` na macOS-u).
+2. Odaberite **Dev Containers: Reopen in Container**.
+3. Odaberite **development** profil kada se to od vas zatraži.
+4. VS Code će ponovno izgraditi kontejner i otvoriti ga s prethodno konfiguriranim okruženjem.
 
 ---
 
-## 🔑 Environment Variables
+## 🔑 Environment varijable
 
-Ensure `.env.local` is configured correctly with:
+Osigurajte da je `.env.local` pravilno konfiguriran sa:
 
-- API keys.
-- Context-specific configurations.
+- API ključevima.
+- Kontekst-specifičnim konfiguracijama.
 
-Example for the `DEFAULT_NUM_CTX` variable:
+Primjer za `DEFAULT_NUM_CTX` varijablu:
 
 ```bash
-DEFAULT_NUM_CTX=24576 # Uses 32GB VRAM
+DEFAULT_NUM_CTX=24576 # Koristi 32GB VRAM
 ```

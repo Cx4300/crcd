@@ -1,105 +1,105 @@
-# Frequently Asked Questions (FAQ)
+# Najčešća pitanja (FAQ)
 
 <details>
-<summary><strong>What are the best models for bolt.diy?</strong></summary>
+<summary><strong>Koji su najbolji modeli za GenAi?</strong></summary>
 
-For the best experience with bolt.diy, we recommend using the following models:
+Za najbolje iskustvo s GenAi, preporučujemo korištenje sljedećih modela:
 
-- **Claude 3.5 Sonnet (old)**: Best overall coder, providing excellent results across all use cases
-- **Gemini 2.0 Flash**: Exceptional speed while maintaining good performance
-- **GPT-4o**: Strong alternative to Claude 3.5 Sonnet with comparable capabilities
-- **DeepSeekCoder V2 236b**: Best open source model (available through OpenRouter, DeepSeek API, or self-hosted)
-- **Qwen 2.5 Coder 32b**: Best model for self-hosting with reasonable hardware requirements
+- **Claude 3.5 Sonnet (stara verzija)**: Najbolji sveukupni coder, pruža izvrsne rezultate u svim slučajevima korištenja
+- **Gemini 2.0 Flash**: Iznimna brzina uz održavanje dobrih performansi
+- **GPT-4o**: Snažna alternativa Claude 3.5 Sonnetu sa sličnim mogućnostima
+- **DeepSeekCoder V2 236b**: Najbolji open source model (dostupan putem OpenRouter, DeepSeek API-ja ili self-hosted)
+- **Qwen 2.5 Coder 32b**: Najbolji model za self-hosting s razumnim hardverskim zahtjevima
 
-**Note**: Models with less than 7b parameters typically lack the capability to properly interact with bolt!
+**Napomena**: Modeli s manje od 7b parametara obično nemaju sposobnost pravilne interakcije s GenAi!
 
 </details>
 
 <details>
-<summary><strong>How do I get the best results with bolt.diy?</strong></summary>
+<summary><strong>Kako postići najbolje rezultate s GenAi?</strong></summary>
 
-- **Be specific about your stack**:  
-  Mention the frameworks or libraries you want to use (e.g., Astro, Tailwind, ShadCN) in your initial prompt. This ensures that bolt.diy scaffolds the project according to your preferences.
+- **Budite specifični o vašem stacku**:
+  Navedite frameworke ili biblioteke koje želite koristiti (npr. Astro, Tailwind, ShadCN) u vašem početnom promptu. To osigurava da GenAi postavlja projekt prema vašim preferencijama.
 
-- **Use the enhance prompt icon**:  
-  Before sending your prompt, click the _enhance_ icon to let the AI refine your prompt. You can edit the suggested improvements before submitting.
+- **Koristite ikonu za poboljšanje prompta**:
+  Prije slanja prompta, kliknite ikonu _enhance_ kako bi AI poboljšao vaš prompt. Možete urediti predložena poboljšanja prije slanja.
 
-- **Scaffold the basics first, then add features**:  
-  Ensure the foundational structure of your application is in place before introducing advanced functionality. This helps bolt.diy establish a solid base to build on.
+- **Prvo postavite osnove, zatim dodajte značajke**:
+  Osigurajte da je temeljna struktura vaše aplikacije na mjestu prije uvođenja napredne funkcionalnosti. To pomaže GenAi-u da uspostavi čvrstu osnovu na kojoj se može graditi.
 
-- **Batch simple instructions**:  
- Combine simple tasks into a single prompt to save time and reduce API credit consumption. For example:  
- _"Change the color scheme, add mobile responsiveness, and restart the dev server."_
+- **Grupirajte jednostavne upute**:
+  Kombinirajte jednostavne zadatke u jedan prompt kako biste uštedjeli vrijeme i smanjili potrošnju API kredita. Na primjer:
+  _"Promijeni shemu boja, dodaj mobilnu responzivnost i ponovno pokreni razvojni poslužitelj."_
 </details>
 
 <details>
-<summary><strong>How do I contribute to bolt.diy?</strong></summary>
+<summary><strong>Kako mogu doprinijeti GenAi?</strong></summary>
 
-Check out our [Contribution Guide](CONTRIBUTING.md) for more details on how to get involved!
-
-</details>
-
-<details>
-<summary><strong>What are the future plans for bolt.diy?</strong></summary>
-
-Visit our [Roadmap](https://roadmap.sh/r/ottodev-roadmap-2ovzo) for the latest updates.  
-New features and improvements are on the way!
+Pogledajte naš [Vodič za doprinos](CONTRIBUTING.md) za više detalja o tome kako se uključiti!
 
 </details>
 
 <details>
-<summary><strong>Why are there so many open issues/pull requests?</strong></summary>
+<summary><strong>Koji su budući planovi za GenAi?</strong></summary>
 
-bolt.diy began as a small showcase project on @ColeMedin's YouTube channel to explore editing open-source projects with local LLMs. However, it quickly grew into a massive community effort!
-
-We're forming a team of maintainers to manage demand and streamline issue resolution. The maintainers are rockstars, and we're also exploring partnerships to help the project thrive.
-
-</details>
-
-<details>
-<summary><strong>How do local LLMs compare to larger models like Claude 3.5 Sonnet for bolt.diy?</strong></summary>
-
-While local LLMs are improving rapidly, larger models like GPT-4o, Claude 3.5 Sonnet, and DeepSeek Coder V2 236b still offer the best results for complex applications. Our ongoing focus is to improve prompts, agents, and the platform to better support smaller local LLMs.
+Posjetite naš Roadmap za najnovija ažuriranja.
+Nove značajke i poboljšanja su na putu!
 
 </details>
 
 <details>
-<summary><strong>Common Errors and Troubleshooting</strong></summary>
+<summary><strong>Zašto postoji toliko otvorenih problema/pull requestova?</strong></summary>
 
-### **"There was an error processing this request"**
+GenAi je započeo kao mali showcase projekt koji je brzo prerastao u masivan zajednički napor!
 
-This generic error message means something went wrong. Check both:
+Formiramo tim održavatelja za upravljanje potražnjom i pojednostavljenje rješavanja problema. Održavatelji su rockstars, a također istražujemo partnerstva koja pomažu projektu da napreduje.
 
-- The terminal (if you started the app with Docker or `pnpm`).
-- The developer console in your browser (press `F12` or right-click > _Inspect_, then go to the _Console_ tab).
+</details>
 
-### **"x-api-key header missing"**
+<details>
+<summary><strong>Kako se lokalni LLM-ovi uspoređuju s većim modelima poput Claude 3.5 Sonneta za GenAi?</strong></summary>
 
-This error is sometimes resolved by restarting the Docker container.  
-If that doesn't work, try switching from Docker to `pnpm` or vice versa. We're actively investigating this issue.
+Iako se lokalni LLM-ovi brzo poboljšavaju, veći modeli poput GPT-4o, Claude 3.5 Sonneta i DeepSeek Codera V2 236b još uvijek nude najbolje rezultate za kompleksne aplikacije. Naš tekući fokus je poboljšanje promptova, agenata i platforme kako bi se bolje podržali manji lokalni LLM-ovi.
 
-### **Blank preview when running the app**
+</details>
 
-A blank preview often occurs due to hallucinated bad code or incorrect commands.  
-To troubleshoot:
+<details>
+<summary><strong>Uobičajene greške i rješavanje problema</strong></summary>
 
-- Check the developer console for errors.
-- Remember, previews are core functionality, so the app isn't broken! We're working on making these errors more transparent.
+### **"Došlo je do greške pri obradi ovog zahtjeva"**
 
-### **"Everything works, but the results are bad"**
+Ova generička poruka o grešci znači da nešto nije u redu. Provjerite oboje:
 
-Local LLMs like Qwen-2.5-Coder are powerful for small applications but still experimental for larger projects. For better results, consider using larger models like GPT-4o, Claude 3.5 Sonnet, or DeepSeek Coder V2 236b.
+- Terminal (ako ste pokrenuli aplikaciju s Dockerom ili `pnpm`).
+- Developer konzolu u vašem pregledniku (pritisnite `F12` ili desni klik > _Inspect_, zatim idite na karticu _Console_).
 
-### **"Received structured exception #0xc0000005: access violation"**
+### **"x-api-key header nedostaje"**
 
-If you are getting this, you are probably on Windows. The fix is generally to update the [Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+Ova greška se ponekad rješava ponovnim pokretanjem Docker kontejnera.
+Ako to ne funkcionira, pokušajte se prebaciti s Dockera na `pnpm` ili obrnuto. Aktivno istražujemo ovaj problem.
 
-### **"Miniflare or Wrangler errors in Windows"**
+### **Prazan pregled pri pokretanju aplikacije**
 
-You will need to make sure you have the latest version of Visual Studio C++ installed (14.40.33816), more information here https://github.com/stackblitz-labs/bolt.diy/issues/19.
+Prazan pregled često se javlja zbog haluciniranog lošeg koda ili netočnih naredbi.
+Za rješavanje problema:
+
+- Provjerite developer konzolu za greške.
+- Zapamtite, pregledi su osnovna funkcionalnost, tako da aplikacija nije pokvarena! Radimo na tome da ove greške učinimo transparentnijim.
+
+### **"Sve radi, ali su rezultati loši"**
+
+Lokalni LLM-ovi poput Qwen-2.5-Codera su moćni za male aplikacije, ali su još eksperimentalni za veće projekte. Za bolje rezultate, razmislite o korištenju većih modela poput GPT-4o, Claude 3.5 Sonneta ili DeepSeek Codera V2 236b.
+
+### **"Primljena strukturirana iznimka #0xc0000005: access violation"**
+
+Ako dobivate ovo, vjerojatno ste na Windowsu. Rješenje je obično ažuriranje [Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+
+### **"Miniflare ili Wrangler greške u Windowsu"**
+
+Morat ćete se uvjeriti da imate najnoviju verziju Visual Studio C++ instaliranu (14.40.33816), više informacija ovdje https://github.com/stackblitz-labs/bolt.diy/issues/19.
 
 </details>
 
 ---
 
-Got more questions? Feel free to reach out or open an issue in our GitHub repo!
+Imate još pitanja? Slobodno nas kontaktirajte ili otvorite issue u našem GitHub repozitoriju!

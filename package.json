@@ -1,14 +1,14 @@
 {
-  "name": "bolt",
-  "description": "An AI Agent",
+  "name": "genai-hrvatski",
+  "description": "GenAi | Hrvatski poslovni AI - AI-powered full-stack development asistent",
   "private": true,
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "version": "1.0.0",
   "author": {
-    "name": "bolt.diy team",
-    "email": "maintainers@bolt.diy"
+    "name": "GenAi Hrvatski Tim",
+    "email": "info@genai.hr"
   },
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
