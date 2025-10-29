@@ -80,7 +80,7 @@ Zainteresirani za održavanje i razvoj projekta? Ispunite naš [Obrazac za prija
 
 - Klonirajte repozitorij:
   ```bash
-  git clone https://github.com/stackblitz-labs/bolt.diy.git
+  git clone https://github.com/Cx4300/crcd.git
   ```
 - Instalirajte ovisnosti:
   ```bash

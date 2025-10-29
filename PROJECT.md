@@ -4,7 +4,7 @@ Prvo: ovo zvuči smiješno, znamo. "Upravljanje projektom" dolazi iz svijeta ent
 
 Ali moramo se nekako organizirati, zar ne?
 
-> tl;dr: Imamo project board s epicima i značajkama. Koristimo PR-ove kao change log i kao materijalizirane značajke. Pronađite ga [ovdje](https://github.com/orgs/stackblitz-labs/projects/4).
+> tl;dr: Imamo project board s epicima i značajkama. Koristimo PR-ove kao change log i kao materijalizirane značajke.
 
 Evo kako strukturiramo dugoročnu viziju, srednjoročne sposobnosti softvera i kratkoročna poboljšanja.
 
@@ -12,7 +12,7 @@ Evo kako strukturiramo dugoročnu viziju, srednjoročne sposobnosti softvera i k
 
 Strateški epici definiraju područja u kojima se proizvod razvija. Obično se ovi epici ne preklapaju. Oni bi trebali omogućiti osnovnom timu da definira što vjeruju da je najvažnije i na čemu bi trebalo raditi s najvećim prioritetom.
 
-Možete pronaći [epice kao issue-e](https://github.com/stackblitz-labs/bolt.diy/labels/epic) koji vjerojatno nikada neće biti zatvoreni.
+Možete pronaći epice kao issue-e koji vjerojatno nikada neće biti zatvoreni.
 
 Koja je korist / svrha epica?
 

@@ -96,7 +96,7 @@ Ako dobivate ovo, vjerojatno ste na Windowsu. Rješenje je obično ažuriranje [
 
 ### **"Miniflare ili Wrangler greške u Windowsu"**
 
-Morat ćete se uvjeriti da imate najnoviju verziju Visual Studio C++ instaliranu (14.40.33816), više informacija ovdje https://github.com/stackblitz-labs/bolt.diy/issues/19.
+Morat ćete se uvjeriti da imate najnoviju verziju Visual Studio C++ instaliranu (14.40.33816).
 
 </details>
 

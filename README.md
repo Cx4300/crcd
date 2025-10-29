@@ -39,7 +39,7 @@ Ako ste novi u instalaciji softvera s GitHuba, ne brinite! Ako naiđete na bilo 
 
 ## Brzo preuzimanje
 
-[![Preuzmi najnovije izdanje](https://img.shields.io/github/v/release/stackblitz-labs/bolt.diy?label=Preuzmi%20GenAi&sort=semver)](https://github.com/stackblitz-labs/bolt.diy/releases/latest) ← Kliknite ovdje za najnoviju verziju!
+[![Preuzmi najnovije izdanje](https://img.shields.io/github/v/release/Cx4300/crcd?label=Preuzmi%20GenAi&sort=semver)](https://github.com/Cx4300/crcd/releases/latest) ← Kliknite ovdje za najnoviju verziju!
 
 - Zatim **kliknite source.zip**
 
@@ -168,13 +168,13 @@ Ova metoda je preporučena za developere koji žele:
 1. **Klonirajte repozitorij**:
 
    ```bash
-   git clone -b stable https://github.com/stackblitz-labs/bolt.diy.git
+   git clone https://github.com/Cx4300/crcd.git
    ```
 
 2. **Navigirajte do direktorija projekta**:
 
    ```bash
-   cd bolt.diy
+   cd crcd
    ```
 
 3. **Instalirajte ovisnosti**:
